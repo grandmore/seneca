@@ -2,11 +2,8 @@
 > A Node.js toolkit for Micro-Service Architectures
 
 # seneca
-[![npm version][npm-badge]][npm-url]
-[![npm downloads][npm-downloads-badge]][npm-url]
-[![Build Status][travis-badge]][travis-url]
-[![Coverage Status][coveralls-badge]][coveralls-url]
-[![Gitter][gitter-badge]][gitter-url]
+
+## update to use [ dimichgh fix for the broken tcp transport](https://github.com/dimichgh/seneca-transport)
 
 ## About Seneca
 _Seneca_ is a toolkit for organizing the business logic of your app. You can break down your app into "stuff that happens", rather than focusing on data models or managing dependencies.
@@ -95,8 +92,8 @@ seneca.act({ cmd: 'salestax', net: 100 }, function (err, result) {
 
 In this code, whenever seneca sees the pattern
 `{cmd:'salestax'}`, it executes the function associated
-with this pattern, which calculates sales tax. There is nothing special about the property `cmd` . 
-It is simply the property we want to pattern match. You could look for `foo` for all seneca cares! 
+with this pattern, which calculates sales tax. There is nothing special about the property `cmd` .
+It is simply the property we want to pattern match. You could look for `foo` for all seneca cares!
  Yah!
 
 The `seneca.add` method adds a new pattern, and the function to execute whenever that pattern occurs.
